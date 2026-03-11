@@ -184,7 +184,95 @@ Each symbol represents **2 bits**.
 - Each **symbol represents 2 bits**
 - Four phase states are spaced **90° apart**
 - This improves **spectral efficiency** compared to BPSK
+### 📐 Mathematical Expression
+
+```
+s(t) = I × cos(2πf_c t) - Q × sin(2πf_c t)
+```
+
+**Where:**
+
+- **I** = cos(φ) → In-phase component  
+- **Q** = sin(φ) → Quadrature component  
+
+### 🔢 Symbol Mapping (Normalized Constellation)
+
+```
+00 → I = +1/√2 , Q = +1/√2
+01 → I = -1/√2 , Q = +1/√2
+11 → I = -1/√2 , Q = -1/√2
+10 → I = +1/√2 , Q = -1/√2
+```
+
+---
+
+### 🧠 Key Insight — IQ Modulation
+
+```
+QPSK = BPSK on I path + BPSK on Q path (simultaneously)
+```
+
+- **Even bits** → BPSK on **I path** using `cos(2πf_c t)`
+- **Odd bits** → BPSK on **Q path** using `sin(2πf_c t)`
+
+Both components are transmitted **at the same time**, which results in:
+
+- **2 bits per symbol**
+- **Same bandwidth as BPSK**
+- **Double the data rate** ✅
 ## 📊 QPSK Constellation Diagram
 
 ![QPSK Constellation](QPSK_conste.jpg)
 
+## 📡 Part 4 — 8PSK (8 Phase Shift Keying)
+
+### 📘 Concept
+
+In **8PSK**, the carrier signal can take **8 different phase states**.
+
+Since there are **8 possible symbols**, each symbol can represent:
+
+```
+log2(8) = 3 bits
+```
+
+Thus, **8PSK carries 3 bits per symbol**, improving spectral efficiency compared to BPSK and QPSK.
+
+---
+
+### 🔢 Tribit to Phase Mapping
+
+```
+Tribits → Phase
+
+000 →   0°
+001 →  45°
+011 →  90°
+010 → 135°
+110 → 180°
+111 → 225°
+101 → 270°
+100 → 315°
+```
+
+---
+
+### 🎯 Key Idea
+
+- **8 phase states**
+- **3 bits per symbol**
+- Higher **spectral efficiency**
+- More **sensitive to noise** than BPSK and QPSK
+
+## 📡 Part 5 — Comparison — BPSK vs QPSK vs 8PSK
+
+| Parameter | BPSK | QPSK | 8PSK |
+|-----------|------|------|------|
+| **Bits per Symbol** | 1 | 2 | 3 |
+| **Number of Phases** | 2 | 4 | 8 |
+| **Bandwidth Efficiency** | Low | Medium | High |
+| **Noise Tolerance (Eb/No)** | Best | Good | Worst |
+| **Minimum Phase Separation** | 180° | 90° | 45° |
+| **Used in Project** | S-Band RX | X-Band TX | X-Band TX |
+
+---

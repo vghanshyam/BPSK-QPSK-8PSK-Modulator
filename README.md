@@ -144,6 +144,9 @@ This means the carrier waveform is **inverted** whenever the transmitted bit cha
 ### 🎯 Key Idea
 
 BPSK encodes digital information by **shifting the phase of the carrier by 180°** between the two symbols.
+## 📊 BPSK Constellation Diagram
+
+![BPSK Constellation](BPSK_conste.JPG)
 ### ⚖ Pros & Cons of BPSK
 
 | Parameter | BPSK |

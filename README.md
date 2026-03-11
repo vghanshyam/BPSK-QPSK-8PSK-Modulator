@@ -146,7 +146,7 @@ This means the carrier waveform is **inverted** whenever the transmitted bit cha
 BPSK encodes digital information by **shifting the phase of the carrier by 180°** between the two symbols.
 ## 📊 BPSK Constellation Diagram
 
-![BPSK Constellation](BPSK_conste.JPG)
+![BPSK Constellation](BPSK_conste.jpg)
 ### ⚖ Pros & Cons of BPSK
 
 | Parameter | BPSK |
@@ -157,3 +157,34 @@ BPSK encodes digital information by **shifting the phase of the carrier by 180°
 | **Typical Use Case** | Very noisy channels, deep-space communication |
 
 ---
+
+## 📡 Part 3 — QPSK (Quadrature Phase Shift Keying)
+
+### 📘 Concept
+
+Instead of using **2 phases** like BPSK, **QPSK uses 4 different phase shifts** of the carrier signal.
+
+This allows **2 bits to be transmitted per symbol**, effectively doubling the data rate compared to BPSK.
+
+---
+
+
+### 🔢 Symbol Mapping
+
+Each symbol represents **2 bits**.
+
+| Bits | I (In-phase) | Q (Quadrature) | Phase |
+|-----|--------------|---------------|------|
+| 00 | +1 | +1 | 45° |
+| 01 | -1 | +1 | 135° |
+| 11 | -1 | -1 | 225° |
+| 10 | +1 | -1 | 315° |
+### 🎯 Key Idea
+
+- Each **symbol represents 2 bits**
+- Four phase states are spaced **90° apart**
+- This improves **spectral efficiency** compared to BPSK
+## 📊 QPSK Constellation Diagram
+
+![QPSK Constellation](QPSK_conste.jpg)
+

@@ -276,3 +276,35 @@ Tribits → Phase
 | **Used in Project** | S-Band RX | X-Band TX | X-Band TX |
 
 ---
+## 📡 Part 8 — Common Interview Questions
+
+### ❓ Q: Why is BPSK used for S-Band telecommand and QPSK/8PSK used for X-Band telemetry?
+
+**Answer:**
+
+- **S-Band Telecommand**  
+  Commands sent to spacecraft must be received **reliably**, even under poor channel conditions.  
+  **BPSK** is used because it has the **highest noise tolerance** and the **lowest probability of error**.
+
+- **X-Band Telemetry**  
+  Telemetry data requires **very high data rates** within a **limited bandwidth**.  
+  **QPSK and 8PSK** are used because they transmit **multiple bits per symbol**, providing **higher spectral efficiency**.
+
+### 🎯 Key Idea
+
+- **BPSK → Reliability**
+- **QPSK / 8PSK → Higher data rate**
+
+## 📡 What is EVM (Error Vector Magnitude)?
+
+**Error Vector Magnitude (EVM)** is a metric used to measure the quality of a digitally modulated signal.
+
+It represents the **distance between the ideal constellation point and the actual received symbol point**.
+
+
+
+### 🎯 Key Idea
+
+EVM directly indicates how accurately the transmitter or receiver reproduces the **ideal constellation points**.
+
+Lower EVM means **better modulator implementation and higher communication reliability**.
